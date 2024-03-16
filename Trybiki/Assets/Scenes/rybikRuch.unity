@@ -548,9 +548,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07ea983918d8bf4088d317901f4f871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1839501732}
-  radius: 0.8
-  speed: 300
+  speed: 5
+  downDuration: 0.1
+  upDuration: 0.1
 --- !u!212 &794585375
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -611,9 +611,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794585373}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.01119865, y: 0.0030273038, z: 0.7097728, w: 0.7043352}
-  m_LocalPosition: {x: -1.04, y: 0.15, z: 0}
-  m_LocalScale: {x: 0.529179, y: 0.4, z: 1}
+  m_LocalRotation: {x: -0.011199882, y: 0.0030242107, z: 0.70977074, w: 0.70433736}
+  m_LocalPosition: {x: -0.64, y: -0.24, z: 0.01}
+  m_LocalScale: {x: 0.60882044, y: 0.492, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1839501732}
@@ -886,6 +886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   dashDistance: 3
+  stats: {fileID: 0}
   objectB: {fileID: 1290737949}
 --- !u!212 &1839501731
 SpriteRenderer:

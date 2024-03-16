@@ -28,6 +28,7 @@ public class Walking : MonoBehaviour
         if (horizontalInput > 0 && isFacingRight)
         {
             FlipSprite();
+
         }
         else if (horizontalInput < 0 && !isFacingRight)
         {
