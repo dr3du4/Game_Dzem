@@ -6,7 +6,8 @@ public class ToggleWeapons : MonoBehaviour
 {
     
     public GameObject[] objectsToToggle;
-
+    public bool spear;
+    public bool shield;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -15,12 +16,20 @@ public class ToggleWeapons : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            ToggleObject(1);
+            if (shield)
+            {
+                ToggleObject(1);
+            }
+            
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            ToggleObject(2);
+            if (spear)
+            {
+                ToggleObject(2);
+            }
         }
+    
     }
 
     void ToggleObject(int index)
