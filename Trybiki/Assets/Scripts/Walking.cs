@@ -11,7 +11,7 @@ public class Walking : MonoBehaviour
    public float speed = 5f;
    public float dashDistance = 3f;
     private bool isFacingRight = true;
-
+    public PlayerStats stats;
     public GameObject objectB; // Obiekt, który ma być przesuwany
 
    private Vector3 originalPosition;
@@ -33,8 +33,12 @@ public class Walking : MonoBehaviour
         {
             FlipSprite();
         }
-        if (Input.GetKeyDown(KeyCode.Space))
-       {
+        if(Input.GetKeyDown(KeyCode.Space))        {
+            Debug.Log(stats.dashPower);
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && stats.dashPower>=30)
+        {
+            stats.dashPower -= 30;
            // Przesuń postać o zadaną odległość w kierunku ruchu
            transform.Translate(moveDirection * dashDistance);
        }
