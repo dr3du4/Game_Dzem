@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 239878629}
   - component: {fileID: 239878628}
   - component: {fileID: 239878630}
+  - component: {fileID: 239878633}
   - component: {fileID: 239878631}
   - component: {fileID: 239878632}
   m_Layer: 0
@@ -392,6 +393,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &239878633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239878627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcd612ab8fff2a47943a44529b27198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToToggle:
+  - {fileID: 1043990235}
+  - {fileID: 307125187}
+  - {fileID: 1853372357}
 --- !u!1 &307125187
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,8 +751,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07ea983918d8bf4088d317901f4f871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 239878629}
-  orbitSpeed: 300
+  player: {fileID: 239878629}
+  radius: 0.8
+  speed: 300
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

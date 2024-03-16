@@ -1,57 +1,38 @@
 using UnityEngine;
-using System.Collections;
 
 public class Kubot : MonoBehaviour
 {
-    public Transform pointA; // Obiekt A
-    public float orbitSpeed = 100f; // Prędkość obrotu w stopniach na sekundę
-    
+    public Transform player; // Referencja do obiektu player
+    public float radius = 1.0f; // Promień ruchu klapka
+    public float speed = 200.0f; // Prędkość ruchu klapka
 
-    private float currentAngle=180; // Aktualny kąt obrotu
-    private float distanceFromPointA; // Odległość między A i B
-    private bool isMoving = false; // Flaga informująca, czy obiekt jest w ruchu
-
-    private Vector3 initialPosition; // Początkowa pozycja obiektu
-
-    void Start()
-    {
-        // Automatycznie ustaw odległość na podstawie promienia okręgu
-        distanceFromPointA = Vector2.Distance(transform.position, pointA.position);
-
-        // Zapisz początkową pozycję obiektu
-        initialPosition = transform.position;
-    }
+    private bool isMoving = false; // Flaga określająca, czy skrypt ma być aktywny
+    private float angle = 145.0f; // Początkowy kąt
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !isMoving)
+        if (isMoving)
         {
+            // Aktualizacja kąta na podstawie prędkości
+            angle += speed * Time.deltaTime;
+
+            // Jeśli kąt przekroczy 135 stopni, zatrzymaj skrypt
+            if (angle > 225.0f)
+            {
+                angle = 145.0f;
+                isMoving = false; // Zatrzymaj skrypt
+            }
+
+            // Oblicz pozycję klapka na podstawie aktualnego kąta
+            Vector3 offset = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad), 0) * radius;
+            transform.position = player.position + offset;
+        }
+
+        // Sprawdź, czy klawisz "S" został naciśnięty
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Rozpocznij ruch klapka
             isMoving = true;
-            StartCoroutine(MoveObject());
         }
-    }
-
-    IEnumerator MoveObject()
-    {
-        float targetAngle = currentAngle + 45f; // 45 stopni w górę od aktualnego kąta
-
-        while (currentAngle < targetAngle)
-        {
-            currentAngle += orbitSpeed * Time.deltaTime;
-            float radianAngle = Mathf.Deg2Rad * currentAngle;
-            Vector3 orbitPosition = new Vector3(
-                pointA.position.x + distanceFromPointA * Mathf.Cos(radianAngle),
-                pointA.position.y + distanceFromPointA * Mathf.Sin(radianAngle),
-                transform.position.z
-            );
-
-            transform.position = orbitPosition;
-            yield return null;
-        }
-
-        // Ustaw pozycję na początkową, aby uniknąć błędów zaokrągleń
-        transform.position = initialPosition;
-        currentAngle += -45;
-        isMoving = false; // Zakończ ruch
     }
 }
