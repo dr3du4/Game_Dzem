@@ -10,17 +10,23 @@ public class Spear : MonoBehaviour
 
     void Start()
     {
-        originalPosition = transform.position;
+        
     }
 
     void Update()
     {
         // Sprawdzamy, czy lewy przycisk myszy został naciśnięty
         if (Input.GetMouseButtonDown(0) && !spearThrown)
-        {
+        {    originalPosition = transform.localPosition;
             // Ustalamy docelową pozycję na pozycję kursora myszy
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPosition.z = 0f;
+            float distanceToPlayer = Vector3.Distance(player.transform.position, targetPosition);
+            if (distanceToPlayer > 2f)
+            {
+                Vector3 directionToPlayer = (player.transform.position - targetPosition).normalized;
+                targetPosition = player.transform.position - directionToPlayer * 2f;
+            }
 
             // Ustawiamy flagę wyrzucania włóczni
             spearThrown = true;
@@ -36,7 +42,7 @@ public class Spear : MonoBehaviour
             {
                 // Resetujemy flagę i przesuwamy włócznię z powrotem do gracza
                 spearThrown = false;
-                transform.position = originalPosition;
+                transform.localPosition = originalPosition;
             }
         }
     }
