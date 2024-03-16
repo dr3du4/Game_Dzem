@@ -12,6 +12,7 @@ public class Spear : MonoBehaviour
     {
         originalRotation = transform.localRotation;
         originalPosition = transform.localPosition;
+        
     }
 
     void Update()
