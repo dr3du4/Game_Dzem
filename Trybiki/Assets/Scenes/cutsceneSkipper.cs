@@ -16,6 +16,6 @@ public class SceneLoader : MonoBehaviour
         yield return new WaitForSeconds(11f);
 
         // Load the new scene
-        SceneManager.LoadScene("firstFloor");
+        SceneManager.LoadScene("GoldCopy/FirstMap");
     }
 }

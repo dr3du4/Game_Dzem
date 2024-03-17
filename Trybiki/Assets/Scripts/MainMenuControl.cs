@@ -12,7 +12,7 @@ public class MainMenuController : MonoBehaviour
     private void LoadStartDelayed()
     {
         // Load the game scene after 1 second delay
-        SceneManager.LoadScene("StoryCutscene1");
+        SceneManager.LoadScene("GoldCopy/StoryCutscene");
     }
     public void Credits()
     {
@@ -23,7 +23,7 @@ public class MainMenuController : MonoBehaviour
     private void LoadCreditsDelayed()
     {
         // Load the game scene after 1 second delay
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("GoldCopy/Credits");
     }
     public void AboutGame()
     {
@@ -33,7 +33,7 @@ public class MainMenuController : MonoBehaviour
     private void LoadAboutDelayed()
     {
         // Load the game scene after 1 second delay
-        SceneManager.LoadScene("AboutGame");
+        SceneManager.LoadScene("GoldCopy/AboutGame");
     }
     public void QuitGame()
     {
@@ -54,7 +54,7 @@ public class MainMenuController : MonoBehaviour
     private void LoadBackDelayed()
     {
         // Load the game scene after 1 second delay
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("GoldCopy/MainMenu");
     }
 
 }

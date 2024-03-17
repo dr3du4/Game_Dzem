@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 1337556911235172065}
   - component: {fileID: 2029269932157624968}
   - component: {fileID: 5904004118496674495}
+  - component: {fileID: 4731208049764651795}
   m_Layer: 0
   m_Name: rybol
   m_TagString: rybik
@@ -347,10 +348,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc057da710ad704eaf5fcf4065a27ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 50
   hpSlider: {fileID: 396928861707483322}
   puf: {fileID: 1200915980038184936, guid: 4e3bf39c390ffd54490aa513d5c69940, type: 3}
-  damge: 0
+  damge: 3
+--- !u!111 &4731208049764651795
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078535493218403528}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 23ffe073897afb3499af14acea22c2fd, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3190439390036949019
 GameObject:
   m_ObjectHideFlags: 0
