@@ -24,14 +24,23 @@ public class PlayerStats : MonoBehaviour
 
     void Increment()
     {
-        dashPower += 1f;
-        dashSlider1.value = dashPower;
-        hpSlider2.value = hp;
-    }
+        if (dashPower < 60)
+        {
+            dashPower += 1f;
+            dashSlider1.value = dashPower;
+            hpSlider2.value = hp;
+        }
 
-    /*private void Update()
+        
+    
+}
+
+    private void Update()
     {
+
+        
         dashSlider1.value = dashPower;
         hpSlider2.value = hp;
-    }*/
+        
+    }
 }
