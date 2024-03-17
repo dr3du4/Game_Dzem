@@ -24,12 +24,14 @@ public class PlayerStats : MonoBehaviour
 
     void Increment()
     {
-        dashPower += 1f; 
-    }
-
-    private void Update()
-    {
+        dashPower += 1f;
         dashSlider1.value = dashPower;
         hpSlider2.value = hp;
     }
+
+    /*private void Update()
+    {
+        dashSlider1.value = dashPower;
+        hpSlider2.value = hp;
+    }*/
 }

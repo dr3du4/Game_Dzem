@@ -557,6 +557,7 @@ GameObject:
   - component: {fileID: 1225051783}
   - component: {fileID: 1225051782}
   - component: {fileID: 1225051786}
+  - component: {fileID: 1225051787}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -703,6 +704,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleFactor: {x: 0.2, y: 0.2, z: 0.2}
   transitionTime: 0.2
+--- !u!114 &1225051787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225051780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd98903d505170c4e9cb2a10e17922da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: bd771fd5c753bad45b80807d4eae9298, type: 3}
 --- !u!1 &1469410288
 GameObject:
   m_ObjectHideFlags: 0
