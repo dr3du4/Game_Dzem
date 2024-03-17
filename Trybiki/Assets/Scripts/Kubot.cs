@@ -2,37 +2,67 @@ using UnityEngine;
 
 public class Kubot : MonoBehaviour
 {
-    public Transform player; // Referencja do obiektu player
-    public float radius = 1.0f; // Promień ruchu klapka
-    public float speed = 200.0f; // Prędkość ruchu klapka
+    public float speed = 5.0f; // Prędkość ruchu klapki
+    public float downDuration = 0.1f; // Czas trwania ruchu w dół
+    public float upDuration = 0.1f; // Czas trwania ruchu w górę
 
     private bool isMoving = false; // Flaga określająca, czy skrypt ma być aktywny
-    private float angle = 145.0f; // Początkowy kąt
+    private bool isMovingDown = false; // Flaga określająca, czy klapka jest obecnie w ruchu w dół
+    private float timer = 0.0f; // Licznik czasu dla ruchu w dół i w górę
 
     void Update()
     {
-        if (isMoving)
+        // Sprawdź, czy nastąpiło kliknięcie myszą
+        if (Input.GetMouseButtonDown(0) && !isMoving)
         {
-            // Aktualizacja kąta na podstawie prędkości
-            angle += speed * Time.deltaTime;
-
-            // Jeśli kąt przekroczy 135 stopni, zatrzymaj skrypt
-            if (angle > 225.0f)
-            {
-                angle = 145.0f;
-                isMoving = false; // Zatrzymaj skrypt
-            }
-
-            // Oblicz pozycję klapka na podstawie aktualnego kąta
-            Vector3 offset = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad), 0) * radius;
-            transform.position = player.position + offset;
+            // Rozpocznij ruch klapki
+            isMoving = true;
         }
 
-        // Sprawdź, czy klawisz "S" został naciśnięty
-        if (Input.GetMouseButtonDown(0))
+        // Sprawdź, czy klapka jest obecnie w ruchu
+        if (isMoving)
         {
-            // Rozpocznij ruch klapka
-            isMoving = true;
+            // Jeśli klapka jest obecnie w ruchu w dół
+            if (isMovingDown)
+            {
+                // Zwiększaj timer dla ruchu w dół
+                timer += Time.deltaTime;
+
+                // Oblicz przemieszczenie w dół na podstawie prędkości
+                Vector3 offset = Vector3.down * speed * Time.deltaTime;
+
+                // Aktualizuj pozycję klapki
+                transform.position += offset;
+
+                // Sprawdź, czy minął czas ruchu w dół
+                if (timer >= downDuration)
+                {
+                    // Zmień kierunek ruchu na w górę, zresetuj timer i flagę ruchu
+                    isMovingDown = false;
+                    timer = 0.0f;
+                    isMoving = true;
+                }
+            }
+            else // Jeśli klapka nie jest obecnie w ruchu w dół, to znaczy, że jest w ruchu w górę
+            {
+                // Zwiększaj timer dla ruchu w górę
+                timer += Time.deltaTime;
+
+                // Oblicz przemieszczenie w górę na podstawie prędkości
+                Vector3 offset = Vector3.up * speed * Time.deltaTime;
+
+                // Aktualizuj pozycję klapki
+                transform.position += offset;
+
+                // Sprawdź, czy minął czas ruchu w górę
+                if (timer >= upDuration)
+                {
+                    // Zmień kierunek ruchu na w dół, zresetuj timer i flagę ruchu
+                    isMovingDown = true;
+                    timer = 0.0f;
+                    isMoving = false;
+                }
+            }
         }
     }
 }

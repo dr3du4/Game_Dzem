@@ -6,7 +6,7 @@ public class MainMenuController : MonoBehaviour
     public void StartGame()
     {
         // Load the game scene when the "Start" button is clicked
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("StoryCutscene");
     }
     public void Credits()
     {
