@@ -32,7 +32,7 @@ public class Egg : MonoBehaviour
     }
 
     // Metoda do generowania obiektu prefab w tej samej pozycji, co poprzedni obiekt
-    void SpawnPrefab()s
+    void SpawnPrefab()
     {
         if (prefabsToSpawn.Length > 0 && spawnArea != null)
         {

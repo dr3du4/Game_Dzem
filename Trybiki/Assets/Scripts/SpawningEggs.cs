@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawningEggs : MonoBehaviour
 {
     public GameObject prefabToSpawn; // Obiekt prefab, który chcemy tworzyć
-    public BoxCollider2D spawnArea; // Obszar, w którym mają pojawiać się obiekty
+    public CircleCollider2D spawnArea; // Obszar, w którym mają pojawiać się obiekty
 
     private float spawnTimer = 0f;
     public float spawnInterval = 3f; // Czas (w sekundach) pomiędzy kolejnymi pojawieniami obiektów
