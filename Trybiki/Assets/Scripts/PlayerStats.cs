@@ -17,7 +17,7 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("Increment", 0f, 1f);
+        InvokeRepeating("Increment", 0f, 0.2f);
         dashSlider1.value = dashPower;
         hpSlider2.value = hp;
     }
