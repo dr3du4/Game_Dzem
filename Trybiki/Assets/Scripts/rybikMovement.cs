@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SquareMovement : MonoBehaviour
+public class RybikMovement : MonoBehaviour
 {
     public Transform player; // Reference to the player's sprite
     public float speed = 1f; // Speed of movement
