@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class ToggleWeapons : MonoBehaviour
 {
-    
+
     public GameObject[] objectsToToggle;
     public bool spear;
     public bool shield;
+    public GameObject image2;
+    public GameObject image3;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -20,7 +23,7 @@ public class ToggleWeapons : MonoBehaviour
             {
                 ToggleObject(1);
             }
-            
+
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -29,8 +32,18 @@ public class ToggleWeapons : MonoBehaviour
                 ToggleObject(2);
             }
         }
-    
+
+        if (spear)
+        {
+            image3.SetActive(true);
+        }
+
+        if (shield)
+        {
+            image2.SetActive(true);
+        }
     }
+
 
     void ToggleObject(int index)
     {
@@ -46,4 +59,5 @@ public class ToggleWeapons : MonoBehaviour
             }
         }
     }
+
 }
