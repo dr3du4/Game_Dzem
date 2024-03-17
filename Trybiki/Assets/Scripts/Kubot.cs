@@ -10,8 +10,12 @@ public class Kubot : MonoBehaviour
     private bool isMovingDown = false; // Flaga określająca, czy klapka jest obecnie w ruchu w dół
     private float timer = 0.0f; // Licznik czasu dla ruchu w dół i w górę
 
-    void Update()
+
+
+
+void Update()
     {
+
         // Sprawdź, czy nastąpiło kliknięcie myszą
         if (Input.GetMouseButtonDown(0) && !isMoving)
         {
@@ -64,5 +68,6 @@ public class Kubot : MonoBehaviour
                 }
             }
         }
+
     }
 }
