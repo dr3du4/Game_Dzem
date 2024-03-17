@@ -9,7 +9,7 @@ public class levelManager : MonoBehaviour
     public GameObject entry;
     public GameObject tekst;
     public int enemyNUmber;
-        
+    private bool isKilled=false;
     private void Start()
     {
         enemyNUmber = enemies.Count;
@@ -21,6 +21,12 @@ public class levelManager : MonoBehaviour
         {
             entry.SetActive(true);
             tekst.SetActive(true);
+        }
+
+        if (enemies.Count == 0 && !isKilled)
+        {
+            Decision.instance.globalValue += 1;
+            isKilled = true;
         }
     }
 }
