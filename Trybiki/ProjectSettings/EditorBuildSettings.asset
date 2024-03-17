@@ -6,18 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StoryCutscene1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/GoldCopy/StoryCutscene.unity
+    guid: 17c301e648e5de84ab33414b19449adf
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: da8045a77e118e34db27b32a699492bf
+    path: Assets/GoldCopy/FirstMap.unity
+    guid: 3e75937dc12f81c468657d472279be07
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: f25c584e27dcf1e44b9278a1b722161a
+    path: Assets/GoldCopy/SecondMap.unity
+    guid: 30a4bcc2d4e4cad4ea9cfb6dd2ecde8f
   - enabled: 1
-    path: Assets/Scenes/AboutGame.unity
-    guid: 1d89c2278b516934da92aafc06caaf58
+    path: Assets/GoldCopy/MainMenu.unity
+    guid: 9645ee6030a357443815f9933f9b58bf
   - enabled: 1
-    path: Assets/Scenes/firstFloor.unity
-    guid: 42b87ee0c6fb50c46ad9a19ffcdfc0e4
+    path: Assets/GoldCopy/Credits.unity
+    guid: 0bdea3c2fa6df824cbe95f04f9e66da1
+  - enabled: 1
+    path: Assets/GoldCopy/Boss.unity
+    guid: 60c906f23ea9cea43bf668228dfafb66
+  - enabled: 1
+    path: Assets/GoldCopy/AboutGame.unity
+    guid: 9fd9c926dd3cc5548b4331e4e851c2f1
   m_configObjects: {}
