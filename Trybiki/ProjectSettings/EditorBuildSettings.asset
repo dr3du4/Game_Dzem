@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/GoldCopy/MainMenu.unity
+    guid: 9645ee6030a357443815f9933f9b58bf
+  - enabled: 1
     path: Assets/GoldCopy/StoryCutscene.unity
     guid: 17c301e648e5de84ab33414b19449adf
   - enabled: 1
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GoldCopy/SecondMap.unity
     guid: 30a4bcc2d4e4cad4ea9cfb6dd2ecde8f
-  - enabled: 1
-    path: Assets/GoldCopy/MainMenu.unity
-    guid: 9645ee6030a357443815f9933f9b58bf
   - enabled: 1
     path: Assets/GoldCopy/Credits.unity
     guid: 0bdea3c2fa6df824cbe95f04f9e66da1
@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GoldCopy/smierc.unity
     guid: 484c768223adc55428047e14802eec04
+  - enabled: 1
+    path: Assets/GoldCopy/win2.unity
+    guid: abbbdd9fd6c924942a7872312f36820d
+  - enabled: 1
+    path: Assets/GoldCopy/win1.unity
+    guid: 2c6094ae871a8ee47994dfdd655e2522
   m_configObjects: {}

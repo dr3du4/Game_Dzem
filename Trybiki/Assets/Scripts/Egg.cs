@@ -31,25 +31,19 @@ public class Egg : MonoBehaviour
         }
     }
 
-    // Metoda do generowania obiektu prefab w tej samej pozycji, co poprzedni obiekt
     void SpawnPrefab()
     {
         if (prefabsToSpawn.Length > 0 && spawnArea != null)
         {
-            // Obliczamy pozycję na podstawie środka obszaru spawnu
+          
             Vector2 spawnPosition = spawnArea.bounds.center;
 
-            // Zniszcz poprzedni obiekt, jeśli istnieje
-            if (spawnedObject != null)
-            {
-                Destroy(spawnedObject);
-            }
+            
 
-            // Tworzymy obiekt prefab w wyznaczonej pozycji
+          
             spawnedObject = Instantiate(prefabsToSpawn[Random.Range(0, prefabsToSpawn.Length)], spawnPosition, Quaternion.identity);
             
-            // Zniszcz obiekt po 5 sekundach
-            Destroy(spawnedObject, 5f);
+          
         }
         else
         {
