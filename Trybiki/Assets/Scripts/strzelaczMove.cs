@@ -5,6 +5,10 @@ public class MoveTowardsPlayer : MonoBehaviour
     public Transform player; // Reference to the player's transform
     public float moveSpeed = 5f; // Movement speed
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     void Update()
     {
         // Check if player reference is set
