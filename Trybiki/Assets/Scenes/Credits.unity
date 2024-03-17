@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 852801490}
   - component: {fileID: 852801489}
   - component: {fileID: 852801488}
+  - component: {fileID: 852801492}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -226,6 +227,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &852801492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852801487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a588dcf1abdce64aa736327ae71fc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: bd771fd5c753bad45b80807d4eae9298, type: 3}
 --- !u!1 &1442622685
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +411,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1442622685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd98903d505170c4e9cb2a10e17922da, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a588dcf1abdce64aa736327ae71fc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clickSound: {fileID: 8300000, guid: bd771fd5c753bad45b80807d4eae9298, type: 3}
