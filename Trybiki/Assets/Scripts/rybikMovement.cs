@@ -1,9 +1,16 @@
+using System;
 using UnityEngine;
 
 public class RybikMovement : MonoBehaviour
 {
     public Transform player; // Reference to the player's sprite
     public float speed = 1f; // Speed of movement
+
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     void Update()
     {
