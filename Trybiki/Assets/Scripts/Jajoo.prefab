@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabsToSpawn:
   - {fileID: 2078535493218403528, guid: cc6aef0cac7acc243a1dea52f410bf20, type: 3}
+  - {fileID: 7167329338258876458, guid: 5d03579f3eccb174dadfe6d6c6def7b8, type: 3}
+  - {fileID: 8325728706872186347, guid: 9c03bf3ae790e1e40878c6ffba4e7e47, type: 3}
   spawnArea: {fileID: 8292140836226932488}
 --- !u!61 &8292140836226932488
 BoxCollider2D:
