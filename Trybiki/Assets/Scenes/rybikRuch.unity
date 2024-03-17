@@ -750,6 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9aa5755e31bbf94d9677e8187bfb427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rybolStats: {fileID: 0}
 --- !u!1 &1290737949
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +912,7 @@ GameObject:
   - component: {fileID: 1839501727}
   - component: {fileID: 1839501734}
   - component: {fileID: 1839501735}
+  - component: {fileID: 1839501736}
   m_Layer: 0
   m_Name: palyer
   m_TagString: Untagged
@@ -1131,6 +1133,20 @@ MonoBehaviour:
   hp: 100
   dashSlider1: {fileID: 0}
   hpSlider2: {fileID: 0}
+--- !u!114 &1839501736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839501726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0b3b5e3e4678f429248c3f0c758340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingSound: {fileID: 8300000, guid: ebe2639aca061524d9f5a16dc49fd0e0, type: 3}
+  moveThreshold: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
