@@ -1,4 +1,4 @@
-/*using UnityEngine;
+using UnityEngine;
 
 public class FlipSprite : MonoBehaviour
 {
@@ -28,4 +28,3 @@ public class FlipSprite : MonoBehaviour
     // Function to flip the sprite vertically
    
 }
-*/
