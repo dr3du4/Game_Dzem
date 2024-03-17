@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -41,6 +42,10 @@ public class PlayerStats : MonoBehaviour
         
         dashSlider1.value = dashPower;
         hpSlider2.value = hp;
-        
+        if (hp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
+    
 }
