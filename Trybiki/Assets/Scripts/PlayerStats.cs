@@ -45,8 +45,9 @@ public class PlayerStats : MonoBehaviour
         hpSlider2.value = hp;
         if (hp <= 0)
         {
-            Destroy(this.gameObject);
             SceneManager.LoadScene("GoldCopy/smierc");
+            Destroy(this.gameObject);
+            
 
         }
     }

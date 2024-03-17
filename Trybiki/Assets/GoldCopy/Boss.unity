@@ -4457,6 +4457,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: rybik
       objectReference: {fileID: 0}
+    - target: {fileID: 2879539006170970563, guid: cc6aef0cac7acc243a1dea52f410bf20, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 202678504}
     - target: {fileID: 5260431427091151132, guid: cc6aef0cac7acc243a1dea52f410bf20, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.1
@@ -7301,7 +7305,7 @@ PrefabInstance:
     - target: {fileID: 2879539006170970563, guid: cc6aef0cac7acc243a1dea52f410bf20, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 202678504}
     - target: {fileID: 5260431427091151132, guid: cc6aef0cac7acc243a1dea52f410bf20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 88.98129
