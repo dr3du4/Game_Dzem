@@ -349,6 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   hpSlider: {fileID: 396928861707483322}
+  puf: {fileID: 1200915980038184936, guid: 4e3bf39c390ffd54490aa513d5c69940, type: 3}
   damge: 0
 --- !u!1 &3190439390036949019
 GameObject:
