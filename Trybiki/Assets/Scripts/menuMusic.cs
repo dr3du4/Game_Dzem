@@ -1,16 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
-public class ButtonSound : MonoBehaviour
+public class ButtonClickSound : MonoBehaviour
 {
-    public AudioClip soundEffect; // Sound effect to be played
-    private AudioSource audioSource; // Reference to the AudioSource component
-    public Button button; // Reference to the button component
+    public AudioClip clickSound; // Sound effect to play
+    private AudioSource audioSource; // Reference to AudioSource component
 
     void Start()
     {
-        // Get the AudioSource component from any GameObject in the scene
+        // Get the AudioSource component attached to any GameObject in the scene
         audioSource = FindObjectOfType<AudioSource>();
 
         // Ensure the AudioSource exists
@@ -20,26 +18,23 @@ public class ButtonSound : MonoBehaviour
             return;
         }
 
-        // Get the Button component attached to this GameObject
-        if (button == null)
-            button = GetComponent<Button>();
-
-        // Register a listener to the button's onClick event
-        button.onClick.AddListener(PlaySound);
+        // Get the Button component attached to this GameObject and register a listener for the click event
+        Button button = GetComponent<Button>();
+        button.onClick.AddListener(PlayClickSound);
     }
 
-    // Function to play the sound when the button is clicked
-    void PlaySound()
+    // Function to play the click sound when the button is clicked
+    void PlayClickSound()
     {
         // Check if a sound effect is assigned
-        if (soundEffect != null)
+        if (clickSound != null)
         {
             // Play the assigned sound effect through the AudioSource component
-            audioSource.PlayOneShot(soundEffect);
+            audioSource.PlayOneShot(clickSound);
         }
         else
         {
-            Debug.LogWarning("No sound effect assigned to the button.");
+            Debug.LogWarning("No click sound assigned to the button.");
         }
     }
 }
