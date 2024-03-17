@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,11 @@ public class Pickup : MonoBehaviour
 
     public PlayerStats stats;
     public ToggleWeapons weapons;
-    void OnTriggerEnter2D(Collider2D other)
+
+
+  
+
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("ApapDzien")) // Sprawdź, czy zderzył się z graczem
         {
@@ -15,7 +20,7 @@ public class Pickup : MonoBehaviour
             {
 
                 stats.hp -= 25;
-
+                Destroy(other.gameObject);
             }
             
         }
@@ -26,7 +31,7 @@ public class Pickup : MonoBehaviour
             {
                 
                 stats.hp += 25;
-               
+                Destroy(other.gameObject);
             }
             
         }
@@ -38,7 +43,7 @@ public class Pickup : MonoBehaviour
                 
                 stats.hp += 10;
                 stats.dashPower += 30; 
-
+                Destroy(other.gameObject);
             }
             
         }
@@ -49,7 +54,8 @@ public class Pickup : MonoBehaviour
             {
 
                 weapons.spear = true;
-                Debug.Log("Dsdsd");
+                
+                Destroy(other.gameObject);
             }
             
         }
@@ -59,7 +65,7 @@ public class Pickup : MonoBehaviour
             {
 
                 weapons.shield = false;
-
+                Destroy(other.gameObject);
             }
             
         }
