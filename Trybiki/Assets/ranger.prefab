@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06912b59e892db94a9caf0212e239ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 0}
+  objectToSpawn: {fileID: 7054412597946219369, guid: 511bab3ab336fd849b1abadd39d1bc83, type: 3}
   playerTag: Player
   spawnDistance: 20
   spawnInterval: 3
@@ -788,7 +788,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.2166865, y: -2.8500247}

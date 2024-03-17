@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 2029269932157624968}
   - component: {fileID: 5904004118496674495}
   - component: {fileID: 4731208049764651795}
+  - component: {fileID: 6594146955919650594}
   m_Layer: 0
   m_Name: rybol
   m_TagString: rybik
@@ -307,7 +308,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.095829606, y: 1.2937095}
@@ -335,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9aa5755e31bbf94d9677e8187bfb427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rybolStats: {fileID: 0}
+  rybolStats: {fileID: 5904004118496674495}
 --- !u!114 &5904004118496674495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +368,33 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!50 &6594146955919650594
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078535493218403528}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3190439390036949019
 GameObject:
   m_ObjectHideFlags: 0
