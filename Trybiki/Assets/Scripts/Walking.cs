@@ -22,7 +22,7 @@ public class Walking : MonoBehaviour
        float horizontalInput = Input.GetAxis("Horizontal");
        float verticalInput = Input.GetAxis("Vertical");
 
-       
+       transform.rotation = Quaternion.identity;
        Vector3 moveDirection = new Vector3(horizontalInput, verticalInput, 0f).normalized;
        transform.Translate(moveDirection * speed * Time.deltaTime);
         if (horizontalInput > 0 && isFacingRight)

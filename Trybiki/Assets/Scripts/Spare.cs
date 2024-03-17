@@ -1,63 +1,34 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spear : MonoBehaviour
 {
-    public float spearSpeed = 5f;
-    public GameObject player; // Gracz
-    private bool spearThrown = false;
-    private Vector3 targetPosition;
-    private Vector3 originalPosition;
-    private Quaternion originalRotation;
+    public GameObject projectilePrefab; // Prefabrykat pocisku
+    public float speed = 20f; // Prędkość pocisku
+    private Vector3 initialPosition; // Początkowa pozycja początkowa
+    private GameObject projectile;
     void Start()
     {
-        originalRotation = transform.localRotation;
-        originalPosition = transform.localPosition;
-        
+        initialPosition = transform.position; // Zapisujemy początkową pozycję
     }
 
     void Update()
     {
-        // Sprawdzamy, czy lewy przycisk myszy został naciśnięty
-        if (Input.GetMouseButtonDown(0) && !spearThrown)
-        {    originalPosition = transform.localPosition;
-            
-            
-            
-            // Ustalamy docelową pozycję na pozycję kursora myszy
-            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            targetPosition.z = 0f;
-            float distanceToPlayer = Vector3.Distance(player.transform.position, targetPosition);
-            if (distanceToPlayer > 2f)
-            {
-                Vector3 directionToPlayer = (player.transform.position - targetPosition).normalized;
-                targetPosition = player.transform.position - directionToPlayer * 2f;
-            }
-           
-            
-            RotateTowards(targetPosition);
-            // Ustawiamy flagę wyrzucania włóczni
-            spearThrown = true;
-        }
-
-        // Jeśli włócznia została wyrzucona, przesuwamy ją w kierunku docelowej pozycji
-        if (spearThrown)
+      
+        if (Input.GetMouseButtonDown(0))
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, spearSpeed * Time.deltaTime);
+           
+            projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
-            // Sprawdzamy, czy włócznia dotarła do docelowej pozycji
-            if (transform.position == targetPosition)
-            {
-                // Resetujemy flagę i przesuwamy włócznię z powrotem do gracza
-                spearThrown = false;
-                transform.localPosition = originalPosition;
-                transform.localRotation = originalRotation; 
-            }
+            
+            Vector3 initialCursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            initialCursorPosition.z = 0f; 
+            Vector3 direction = (initialCursorPosition - transform.position).normalized;
+
+         
+            projectile.GetComponent<Rigidbody2D>().velocity = direction * speed;
         }
-    }
-    void RotateTowards(Vector3 targetPosition)
-    {
-        Vector3 direction = (targetPosition - transform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        
+        
     }
 }

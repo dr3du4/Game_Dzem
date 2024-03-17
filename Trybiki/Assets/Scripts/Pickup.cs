@@ -48,7 +48,7 @@ public class Pickup : MonoBehaviour
             
         }
         
-        else if (other.CompareTag("Spare")) // Sprawdź, czy zderzył się z graczem
+        else if (other.CompareTag("SparePic")) // Sprawdź, czy zderzył się z graczem
         {
             if (Input.GetKeyDown(KeyCode.E)) // Sprawdź, czy naciśnięto klawisz E
             {

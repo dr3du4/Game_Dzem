@@ -73,7 +73,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0.5, y: 5}
-  m_SizeDelta: {x: 4, y: 0.5}
+  m_SizeDelta: {x: 4, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3481122192225510119
 Canvas:
@@ -148,9 +148,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5260431427091151132}
   - component: {fileID: 5665170353908716084}
+  - component: {fileID: 1339292248265576708}
   - component: {fileID: 2879539006170970563}
   - component: {fileID: 55469522024234786}
-  - component: {fileID: 1339292248265576708}
   - component: {fileID: 1337556911235172065}
   - component: {fileID: 2029269932157624968}
   - component: {fileID: 5904004118496674495}
@@ -231,6 +231,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1339292248265576708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078535493218403528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0964f648fef39c479f862f0417576ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &2879539006170970563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,19 +279,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1339292248265576708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078535493218403528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0964f648fef39c479f862f0417576ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!61 &1337556911235172065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078535493218403528}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.0001
@@ -595,7 +595,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0.25}
+  m_SizeDelta: {x: 0, y: 0.099999994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8104664492140549219
 CanvasRenderer:

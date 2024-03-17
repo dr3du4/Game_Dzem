@@ -12,6 +12,7 @@ TagManager:
   - rybik
   - Kubot
   - Laser
+  - SparePic
   layers:
   - Default
   - TransparentFX
