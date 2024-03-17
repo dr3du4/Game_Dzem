@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
@@ -45,6 +46,8 @@ public class PlayerStats : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(this.gameObject);
+            SceneManager.LoadScene("GoldCopy/smierc");
+
         }
     }
     

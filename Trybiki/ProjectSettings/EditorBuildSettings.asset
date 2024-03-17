@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GoldCopy/AboutGame.unity
     guid: 9fd9c926dd3cc5548b4331e4e851c2f1
+  - enabled: 1
+    path: Assets/GoldCopy/smierc.unity
+    guid: 484c768223adc55428047e14802eec04
   m_configObjects: {}
