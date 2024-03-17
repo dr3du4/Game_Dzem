@@ -10,8 +10,24 @@ public class levelManager : MonoBehaviour
     public GameObject tekst;
     public int enemyNUmber;
     private bool isKilled=false;
-    private void Start()
+   
+
+  
+
+    void FindAllRybiks()
     {
+        // Znajdujemy wszystkie obiekty z tagiem "Rybik" w scenie
+        GameObject[] rybikArray = GameObject.FindGameObjectsWithTag("rybik");
+
+        // Dodajemy każdy znaleziony obiekt do listy
+        foreach (GameObject rybik in rybikArray)
+        {
+            enemies.Add(rybik);
+        }
+    }
+    private void Start()
+    {FindAllRybiks();
+    
         enemyNUmber = enemies.Count;
     }
 
